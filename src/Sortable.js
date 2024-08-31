@@ -1681,6 +1681,7 @@ Sortable.prototype = /** @lends Sortable.prototype */ {
 			off(el, 'dragover', this);
 			off(el, 'dragenter', this);
 		}
+		ignoreNextClick = false;
 		// Remove draggable attributes
 		Array.prototype.forEach.call(el.querySelectorAll('[draggable]'), function (el) {
 			el.removeAttribute('draggable');
